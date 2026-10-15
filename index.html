@@ -205,5 +205,67 @@ p{margin:0;text-wrap:pretty}
   </div>
 </footer>
 
+<script>
+/* Links like #outreach (from the PDF or the list at the top) land on that lesson
+   with its title and the whole player on screen. */
+(function () {
+  var ids = ['market', 'outreach', 'numbers', 'negotiation'];
+  var root = document.documentElement;
+
+  function spot(sec) {
+    var y0 = window.pageYOffset;
+    var head = sec.querySelector('.kicker') || sec;
+    var vid = sec.querySelector('.video');
+    var top = head.getBoundingClientRect().top + y0 - 24;
+    if (vid) {
+      var vt = vid.getBoundingClientRect().top + y0;
+      var vb = vt + vid.offsetHeight;
+      var room = window.innerHeight - 16;
+      if (vb - top > room) top = (vb - vt > room) ? vt - 8 : vb - room;
+    }
+    return Math.max(0, Math.round(top));
+  }
+
+  function go(id, smooth) {
+    var sec = document.getElementById(id);
+    if (!sec) return;
+    var y = spot(sec);
+    if (smooth) { window.scrollTo({ top: y, behavior: 'smooth' }); return; }
+    var prev = root.style.scrollBehavior;
+    root.style.scrollBehavior = 'auto';
+    window.scrollTo(0, y);
+    root.style.scrollBehavior = prev;
+  }
+
+  var id = (location.hash || '').slice(1);
+  if (ids.indexOf(id) > -1) {
+    var held = true;
+    var stop = function () { held = false; };
+    ['wheel', 'touchstart', 'mousedown', 'keydown'].forEach(function (e) {
+      window.addEventListener(e, stop, { passive: true, once: true });
+    });
+    var hold = function () { if (held) go(id); };
+    hold();
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(hold);
+    window.addEventListener('load', hold);
+    [300, 900, 1800, 3000].forEach(function (t) { setTimeout(hold, t); });
+  }
+
+  window.addEventListener('hashchange', function () {
+    var t = (location.hash || '').slice(1);
+    if (ids.indexOf(t) > -1) go(t);
+  });
+
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest ? e.target.closest('a[href^="#"]') : null;
+    if (!a) return;
+    var t = a.getAttribute('href').slice(1);
+    if (ids.indexOf(t) < 0) return;
+    e.preventDefault();
+    if (history.pushState) history.pushState(null, '', '#' + t);
+    go(t, true);
+  });
+})();
+</script>
 </body>
 </html>
