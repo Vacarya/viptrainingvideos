@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Training videos | VIP Launch Kit</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#062F66;
+  --ink:#062F66;
+  --ink2:rgba(6,47,102,.78);
+  --ink3:rgba(6,47,102,.54);
+  --line:rgba(6,47,102,.12);
+  --mist:#E8EEF4;
+  --mist2:#F4F7FA;
+  --accent:#6C8EBF;
+  --w2:rgba(255,255,255,.80);
+  --w3:rgba(255,255,255,.58);
+  --wline:rgba(255,255,255,.16);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:#fff;color:var(--ink2);font-family:'Poppins',sans-serif;font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+h1,h2{font-family:'Montserrat',sans-serif;font-weight:700;margin:0;color:var(--ink);text-wrap:balance}
+p{margin:0;text-wrap:pretty}
+.wrap{max-width:880px;margin:0 auto;padding:0 32px}
+.eyebrow{font:600 11px/1 'Montserrat',sans-serif;letter-spacing:.2em;text-transform:uppercase;color:var(--ink3)}
+.badge{width:30px;height:30px;border-radius:50%;background:var(--accent);color:#fff;font:600 11.5px/30px 'Montserrat',sans-serif;text-align:center;flex:none}
+
+/* hero */
+.hero{background:var(--navy);color:var(--w2);position:relative;overflow:hidden}
+.hero .mark{position:absolute;right:-180px;bottom:-140px;width:760px;opacity:.06;pointer-events:none}
+.hero .mark svg{width:100%;height:auto;display:block}
+.top{display:flex;justify-content:space-between;align-items:center;padding:36px 0 0;position:relative}
+.top .logo svg{height:20px;width:auto;display:block}
+.top .eyebrow{color:var(--w3)}
+.hero-body{position:relative;padding:88px 0 72px}
+.rule{width:40px;height:3px;background:var(--accent);border-radius:2px;margin-bottom:26px}
+.hero h1{color:#fff;font-size:clamp(40px,7vw,64px);line-height:1;letter-spacing:-.035em}
+.hero .lead{font:300 clamp(16px,2.2vw,19px)/1.55 'Poppins',sans-serif;color:var(--w2);margin-top:20px;max-width:560px}
+.jump{list-style:none;margin:44px 0 0;padding:0;max-width:560px}
+.jump li a{display:flex;align-items:center;gap:16px;padding:14px 0;border-bottom:1px solid var(--wline);font:500 15px/1.35 'Poppins',sans-serif;color:#fff}
+.jump li:first-child a{border-top:1px solid var(--wline)}
+.jump .n{font:600 11px/1 'Montserrat',sans-serif;letter-spacing:.12em;color:var(--w3);width:20px;flex:none}
+.jump .goes{margin-left:auto;font:400 12px/1 'Poppins',sans-serif;color:var(--w3)}
+.jump svg{width:16px;height:16px;stroke:var(--w3);stroke-width:2;flex:none}
+
+/* lessons */
+.lessons{padding:24px 0 40px}
+.lesson{padding:64px 0;border-bottom:1px solid var(--line);scroll-margin-top:16px}
+.lesson:last-child{border-bottom:0}
+.kicker{display:flex;align-items:center;gap:12px;margin-bottom:18px}
+.lesson h2{font-size:clamp(28px,4.4vw,38px);line-height:1.1;letter-spacing:-.024em}
+.lesson .desc{font-size:16px;line-height:1.62;color:var(--ink2);margin-top:12px;max-width:600px}
+.video{margin-top:28px;border-radius:22px;overflow:hidden;background:var(--mist)}
+/* placeholder box: delete it when the embed code goes in */
+.placeholder{aspect-ratio:16/9;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;text-align:center;padding:24px}
+.placeholder .play{width:68px;height:68px;border-radius:50%;background:var(--navy);display:grid;place-items:center}
+.placeholder .play svg{width:26px;height:26px;stroke:#fff;fill:#fff;margin-left:3px}
+.placeholder span{font:500 13px/1.4 'Poppins',sans-serif;color:var(--ink3)}
+
+/* footer */
+.foot{background:var(--navy);color:var(--w2);position:relative;overflow:hidden}
+.foot-inner{padding:64px 0 56px;display:flex;flex-direction:column;align-items:center;text-align:center;position:relative}
+.foot h2{color:#fff;font-size:clamp(30px,5vw,44px);letter-spacing:-.03em}
+.foot p{font:300 17px/1.6 'Poppins',sans-serif;color:var(--w2);margin-top:12px}
+.btn{display:inline-flex;align-items:center;gap:10px;height:48px;padding:0 24px;border-radius:999px;background:#fff;color:var(--navy);font:600 14px/1 'Montserrat',sans-serif;margin-top:26px}
+.btn svg{width:16px;height:16px;stroke:var(--navy);stroke-width:2}
+.foot .logo{margin-top:56px;padding-top:28px;border-top:1px solid var(--wline);width:100%;display:flex;justify-content:center}
+.foot .logo svg{height:18px;width:auto;display:block}
+
+@media (max-width:600px){
+  .wrap{padding:0 20px}
+  .top{padding-top:24px}
+  .top .eyebrow{display:none}
+  .hero-body{padding:56px 0 48px}
+  .jump .goes{display:none}
+  .lesson{padding:48px 0}
+  .video{border-radius:16px}
+}
+
+.pill{display:inline-block;font:600 10.5px/1 'Montserrat',sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#fff;background:var(--navy);padding:7px 12px 7px 13px;border-radius:999px}
+.pill.dark{background:rgba(255,255,255,.12);border:1px solid var(--wline);font-size:9px;padding:5px 9px;margin-right:-4px}
+.bonus{background:var(--mist);padding:72px 0 80px;scroll-margin-top:0}
+.bonus h2{font-size:clamp(28px,4.4vw,38px);line-height:1.1;letter-spacing:-.024em}
+.bonus .desc{font-size:16px;line-height:1.62;color:var(--ink2);margin-top:12px;max-width:620px}
+.bonus .video{background:#fff}
+@media (max-width:600px){.bonus{padding:52px 0 60px}}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="mark"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 153.001 91.124"><path d="M113.531 26.004C118.789 22.424 124.445 19.709 130.447 17.875C120.034 27.267 107.183 41.865 94.488 64.09L94.488 62.707C94.488 48.766 100.766 35.655 111.3 27.613C111.905 27.146 112.545 26.696 113.168 26.246L113.531 26.004" fill="#FFFFFF" fill-rule="nonzero"/><path d="M153.001 2.429C153.001 2.429 148.937 3.969 142.347 8.448C130.396 9.659 119.446 13.62 109.64 20.279L109.259 20.555C108.516 21.057 107.807 21.576 107.097 22.112C94.869 31.452 87.569 46.621 87.569 62.706L87.569 77.045C85.339 81.49 83.142 86.178 80.98 91.124L80.98 52.675C80.98 37.955 87.448 23.755 99.158 14.83C99.815 14.329 100.49 13.827 101.182 13.36L101.545 13.101C118.184 1.789 136.38 0.008 153.001 2.429" fill="#FFFFFF" fill-rule="nonzero"/><path d="M51.453 13.105C51.578 13.19 51.702 13.276 51.827 13.361C52.515 13.836 53.188 14.325 53.849 14.829C65.55 23.755 72.017 37.953 72.017 52.671L72.017 91.121C39.855 17.456 0 2.428 0 2.428C16.63 0 34.82 1.787 51.453 13.105" fill="#FFFFFF" fill-rule="nonzero"/></svg></div>
+  <div class="wrap">
+    <div class="top">
+      <span class="logo"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 697.998 91.124"><path d="M113.531 26.004C118.789 22.424 124.445 19.709 130.447 17.875C120.034 27.267 107.183 41.865 94.488 64.09L94.488 62.707C94.488 48.766 100.766 35.655 111.3 27.613C111.905 27.146 112.545 26.696 113.168 26.246L113.531 26.004" fill="#FFFFFF" fill-rule="nonzero"/><path d="M153.001 2.429C153.001 2.429 148.937 3.969 142.347 8.448C130.396 9.659 119.446 13.62 109.64 20.279L109.259 20.555C108.516 21.057 107.807 21.576 107.097 22.112C94.869 31.452 87.569 46.621 87.569 62.706L87.569 77.045C85.339 81.49 83.142 86.178 80.98 91.124L80.98 52.675C80.98 37.955 87.448 23.755 99.158 14.83C99.815 14.329 100.49 13.827 101.182 13.36L101.545 13.101C118.184 1.789 136.38 0.008 153.001 2.429" fill="#FFFFFF" fill-rule="nonzero"/><path d="M51.453 13.105C51.578 13.19 51.702 13.276 51.827 13.361C52.515 13.836 53.188 14.325 53.849 14.829C65.55 23.755 72.017 37.953 72.017 52.671L72.017 91.121C39.855 17.456 0 2.428 0 2.428C16.63 0 34.82 1.787 51.453 13.105" fill="#FFFFFF" fill-rule="nonzero"/><path d="M347.031 41.008C348.794 39.247 350.908 37.877 353.314 36.939C355.729 35.998 358.416 35.52 361.301 35.52C364.355 35.52 367.218 36.132 369.807 37.336C372.396 38.543 374.784 40.379 376.904 42.795L377.113 43.031L386.914 33.982L386.73 33.758C383.712 30.077 379.933 27.247 375.502 25.349C371.075 23.451 366.055 22.489 360.58 22.489C355.649 22.489 351.041 23.297 346.884 24.893C342.726 26.49 339.046 28.798 335.941 31.75C332.836 34.704 330.39 38.22 328.673 42.199C326.954 46.175 326.084 50.606 326.084 55.366C326.084 60.127 326.954 64.558 328.673 68.536C330.39 72.514 332.82 76.029 335.894 78.981C338.968 81.936 342.651 84.243 346.841 85.84C351.025 87.436 355.618 88.244 360.49 88.244C366.023 88.244 371.075 87.268 375.504 85.34C379.936 83.412 383.713 80.567 386.73 76.885L386.914 76.661L377.109 67.611L376.903 67.853C374.779 70.328 372.392 72.195 369.807 73.397L369.807 73.398C367.222 74.601 364.361 75.212 361.301 75.212C358.409 75.212 355.722 74.736 353.313 73.795C350.911 72.859 348.798 71.489 347.031 69.725C345.269 67.962 343.885 65.847 342.916 63.439C341.946 61.028 341.454 58.311 341.454 55.366C341.454 52.423 341.946 49.707 342.916 47.295C343.885 44.886 345.269 42.772 347.031 41.008" fill="#FFFFFF" fill-rule="nonzero"/><path d="M525.622 37.896C527.937 39.9 529.097 42.718 529.097 46.349C529.097 49.919 527.937 52.723 525.622 54.757C523.305 56.793 519.798 57.81 515.101 57.81L502.701 57.81L502.701 34.889L515.101 34.889C519.798 34.889 523.305 35.892 525.622 37.896ZM531.164 67.11C535.422 65.231 538.71 62.523 541.028 58.984C543.344 55.447 544.504 51.234 544.504 46.349C544.504 41.402 543.344 37.144 541.028 33.574C538.71 30.003 535.422 27.265 531.164 25.354C526.904 23.444 521.831 22.49 515.946 22.49L487.482 22.49L487.482 88.246L502.701 88.246L502.701 69.928L515.946 69.928C516.187 69.928 516.406 69.902 516.644 69.899L529.285 88.246L545.725 88.246L531.03 67.159C531.073 67.141 531.121 67.129 531.164 67.11" fill="#FFFFFF" fill-rule="nonzero"/><path d="M605.12 22.489L588.954 49.295L572.856 22.489L555.87 22.489L581.327 64.806L581.327 88.245L596.546 88.245L596.546 64.964L622.097 22.489L605.12 22.489" fill="#FFFFFF" fill-rule="nonzero"/><path d="M200.023 69.454L180.024 22.49L164.244 22.49L192.612 88.246L207.643 88.246L236.106 22.49L220.325 22.49L200.023 69.454" fill="#FFFFFF" fill-rule="nonzero"/><path d="M269.453 22.489L241.084 88.245L256.865 88.245L276.864 41.281L297.166 88.245L312.947 88.245L284.483 22.489L269.453 22.489" fill="#FFFFFF" fill-rule="nonzero"/><path d="M426.8 22.489L398.431 88.245L414.212 88.245L434.211 41.281L454.512 88.245L470.294 88.245L441.83 22.489L426.8 22.489" fill="#FFFFFF" fill-rule="nonzero"/><path d="M697.998 88.245L669.535 22.489L654.504 22.489L626.135 88.245L641.917 88.245L661.915 41.281L682.217 88.245L697.998 88.245" fill="#FFFFFF" fill-rule="nonzero"/></svg></span>
+      <span class="eyebrow">VIP Launch Kit</span>
+    </div>
+    <div class="hero-body">
+      <div class="rule"></div>
+      <h1>Training videos</h1>
+      <p class="lead">Three lessons that pair well with your VIP Launch Kit. They show you how to use the tools and how the process works.</p>
+      <ul class="jump">
+        <li><a href="#market"><span class="n">01</span>Finding a profitable market<span class="goes">Landlord approval kit</span><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><path d="M12 5v14" /><path d="m19 12-7 7-7-7" /></svg></a></li>
+        <li><a href="#outreach"><span class="n">02</span>The outreach process<span class="goes">Landlord approval kit</span><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><path d="M12 5v14" /><path d="m19 12-7 7-7-7" /></svg></a></li>
+        <li><a href="#numbers"><span class="n">03</span>Running the numbers<span class="goes">Deal calculator</span><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><path d="M12 5v14" /><path d="m19 12-7 7-7-7" /></svg></a></li>
+        <li><a href="#negotiation"><span class="pill dark">Bonus</span>Negotiating lease terms<span class="goes">Video</span><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><path d="M12 5v14" /><path d="m19 12-7 7-7-7" /></svg></a></li>
+      </ul>
+    </div>
+  </div>
+</header>
+
+<main class="lessons">
+  <div class="wrap">
+
+    <section class="lesson" id="market">
+      <div class="kicker"><span class="badge">01</span><span class="eyebrow">Landlord approval kit</span></div>
+      <h2>Finding a profitable market</h2>
+      <p class="desc">How I check if a market is worth it before any outreach.</p>
+      <div class="video">
+        <!-- VIDEO 1: Vidalytics embed -->
+        <div id="vidalytics_embed_tRcd__xve5GVFnum" style="width: 100%; position:relative; padding-top: 56.25%;"></div>
+        <script type="text/javascript">
+        (function (v, i, d, a, l, y, t, c, s) {
+            y='_'+d.toLowerCase();c=d+'L';if(!v[d]){v[d]={};}if(!v[c]){v[c]={};}if(!v[y]){v[y]={};}var vl='Loader',vli=v[y][vl],vsl=v[c][vl + 'Script'],vlf=v[c][vl + 'Loaded'],ve='Embed';
+            if (!vsl){vsl=function(u,cb){
+                if(t){cb();return;}s=i.createElement("script");s.type="text/javascript";s.async=1;s.src=u;
+                if(s.readyState){s.onreadystatechange=function(){if(s.readyState==="loaded"||s.readyState=="complete"){s.onreadystatechange=null;vlf=1;cb();}};}else{s.onload=function(){vlf=1;cb();};}
+                i.getElementsByTagName("head")[0].appendChild(s);
+            };}
+            vsl(l+'loader.min.js',function(){if(!vli){var vlc=v[c][vl];vli=new vlc();}vli.loadScript(l+'player.min.js',function(){var vec=v[d][ve];t=new vec();t.run(a);});});
+        })(window, document, 'Vidalytics', 'vidalytics_embed_tRcd__xve5GVFnum', 'https://fast.vidalytics.com/embeds/xWCLYwSv/tRcd__xve5GVFnum/');
+        </script>
+      </div>
+    </section>
+
+    <section class="lesson" id="outreach">
+      <div class="kicker"><span class="badge">02</span><span class="eyebrow">Landlord approval kit</span></div>
+      <h2>The outreach process</h2>
+      <p class="desc">My full outreach process, step by step.</p>
+      <div class="video">
+        <!-- VIDEO 2: Vidalytics embed -->
+        <div id="kIyggmRZZVgqKK5t" style="width: 100%; position:relative; padding-top: 56.25%;"></div>
+        <script type="text/javascript">
+            (function (v, i, d, a, l, y, t, c, s) {
+                y='_'+d.toLowerCase();if(!v[y]){v[y]={}}if(!v[y].embeds){v[y].embeds={}}
+                t=function(){if(v[d]&&v[d].Embed){var ve=v[d].Embed;c=new ve();c.run(a);c.loadCss();}else{setTimeout(t,1000)}};s=new XMLHttpRequest();s.open("GET",l+'?ac='+(new Date()).getTime(),true);
+                s.onreadystatechange=function(){if(s.readyState==4){if((s.status==200||s.status==304)){var sd=JSON.parse(s.responseText);v[y].embeds[a]={type:"video",options: sd};t();}}};s.send();
+            })(window, document, 'Vidalytics', 'kIyggmRZZVgqKK5t', 'https://fast.vidalytics.com/embeds/xWCLYwSv/kIyggmRZZVgqKK5t/player.settings.json');
+        </script>
+      </div>
+    </section>
+
+    <section class="lesson" id="numbers">
+      <div class="kicker"><span class="badge">03</span><span class="eyebrow">Deal calculator</span></div>
+      <h2>Running the numbers</h2>
+      <p class="desc">How I run a property's numbers before signing a lease.</p>
+      <div class="video">
+        <!-- VIDEO 3: Vidalytics embed -->
+        <div id="o2R0ahjwxgmUbcwY" style="width: 100%; position:relative; padding-top: 56.25%;"></div>
+        <script type="text/javascript">
+            (function (v, i, d, a, l, y, t, c, s) {
+                y='_'+d.toLowerCase();if(!v[y]){v[y]={}}if(!v[y].embeds){v[y].embeds={}}
+                t=function(){if(v[d]&&v[d].Embed){var ve=v[d].Embed;c=new ve();c.run(a);c.loadCss();}else{setTimeout(t,1000)}};s=new XMLHttpRequest();s.open("GET",l+'?ac='+(new Date()).getTime(),true);
+                s.onreadystatechange=function(){if(s.readyState==4){if((s.status==200||s.status==304)){var sd=JSON.parse(s.responseText);v[y].embeds[a]={type:"video",options: sd};t();}}};s.send();
+            })(window, document, 'Vidalytics', 'o2R0ahjwxgmUbcwY', 'https://fast.vidalytics.com/embeds/xWCLYwSv/o2R0ahjwxgmUbcwY/player.settings.json');
+        </script>
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<section class="bonus" id="negotiation">
+  <div class="wrap">
+    <div class="kicker"><span class="pill">Bonus</span><span class="eyebrow">Video</span></div>
+    <h2>Negotiating lease terms</h2>
+    <p class="desc">This is an old presentation I did internally, but I've included it because, despite its lack of polish, I think it will be very valuable before you sign a lease.</p>
+    <div class="video">
+      <!-- VIDEO 4 (BONUS): Vidalytics embed -->
+      <div id="sPFGg1qt3Zyqze2X" style="width: 100%; position:relative; padding-top: 56.25%;"></div>
+      <script type="text/javascript">
+          (function (v, i, d, a, l, y, t, c, s) {
+              y='_'+d.toLowerCase();if(!v[y]){v[y]={}}if(!v[y].embeds){v[y].embeds={}}
+              t=function(){if(v[d]&&v[d].Embed){var ve=v[d].Embed;c=new ve();c.run(a);c.loadCss();}else{setTimeout(t,1000)}};s=new XMLHttpRequest();s.open("GET",l+'?ac='+(new Date()).getTime(),true);
+              s.onreadystatechange=function(){if(s.readyState==4){if((s.status==200||s.status==304)){var sd=JSON.parse(s.responseText);v[y].embeds[a]={type:"video",options: sd};t();}}};s.send();
+          })(window, document, 'Vidalytics', 'sPFGg1qt3Zyqze2X', 'https://fast.vidalytics.com/embeds/xWCLYwSv/sPFGg1qt3Zyqze2X/player.settings.json');
+      </script>
+    </div>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="wrap foot-inner">
+    <h2>Questions?</h2>
+    <p>Email us and we'll help with anything in this kit.</p>
+    <a class="btn" href="mailto:samuel@stayvacarya.com"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7" /><rect x="2" y="4" width="20" height="16" rx="2" /></svg> samuel@stayvacarya.com</a>
+    <div class="logo"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 697.998 91.124"><path d="M113.531 26.004C118.789 22.424 124.445 19.709 130.447 17.875C120.034 27.267 107.183 41.865 94.488 64.09L94.488 62.707C94.488 48.766 100.766 35.655 111.3 27.613C111.905 27.146 112.545 26.696 113.168 26.246L113.531 26.004" fill="#FFFFFF" fill-rule="nonzero"/><path d="M153.001 2.429C153.001 2.429 148.937 3.969 142.347 8.448C130.396 9.659 119.446 13.62 109.64 20.279L109.259 20.555C108.516 21.057 107.807 21.576 107.097 22.112C94.869 31.452 87.569 46.621 87.569 62.706L87.569 77.045C85.339 81.49 83.142 86.178 80.98 91.124L80.98 52.675C80.98 37.955 87.448 23.755 99.158 14.83C99.815 14.329 100.49 13.827 101.182 13.36L101.545 13.101C118.184 1.789 136.38 0.008 153.001 2.429" fill="#FFFFFF" fill-rule="nonzero"/><path d="M51.453 13.105C51.578 13.19 51.702 13.276 51.827 13.361C52.515 13.836 53.188 14.325 53.849 14.829C65.55 23.755 72.017 37.953 72.017 52.671L72.017 91.121C39.855 17.456 0 2.428 0 2.428C16.63 0 34.82 1.787 51.453 13.105" fill="#FFFFFF" fill-rule="nonzero"/><path d="M347.031 41.008C348.794 39.247 350.908 37.877 353.314 36.939C355.729 35.998 358.416 35.52 361.301 35.52C364.355 35.52 367.218 36.132 369.807 37.336C372.396 38.543 374.784 40.379 376.904 42.795L377.113 43.031L386.914 33.982L386.73 33.758C383.712 30.077 379.933 27.247 375.502 25.349C371.075 23.451 366.055 22.489 360.58 22.489C355.649 22.489 351.041 23.297 346.884 24.893C342.726 26.49 339.046 28.798 335.941 31.75C332.836 34.704 330.39 38.22 328.673 42.199C326.954 46.175 326.084 50.606 326.084 55.366C326.084 60.127 326.954 64.558 328.673 68.536C330.39 72.514 332.82 76.029 335.894 78.981C338.968 81.936 342.651 84.243 346.841 85.84C351.025 87.436 355.618 88.244 360.49 88.244C366.023 88.244 371.075 87.268 375.504 85.34C379.936 83.412 383.713 80.567 386.73 76.885L386.914 76.661L377.109 67.611L376.903 67.853C374.779 70.328 372.392 72.195 369.807 73.397L369.807 73.398C367.222 74.601 364.361 75.212 361.301 75.212C358.409 75.212 355.722 74.736 353.313 73.795C350.911 72.859 348.798 71.489 347.031 69.725C345.269 67.962 343.885 65.847 342.916 63.439C341.946 61.028 341.454 58.311 341.454 55.366C341.454 52.423 341.946 49.707 342.916 47.295C343.885 44.886 345.269 42.772 347.031 41.008" fill="#FFFFFF" fill-rule="nonzero"/><path d="M525.622 37.896C527.937 39.9 529.097 42.718 529.097 46.349C529.097 49.919 527.937 52.723 525.622 54.757C523.305 56.793 519.798 57.81 515.101 57.81L502.701 57.81L502.701 34.889L515.101 34.889C519.798 34.889 523.305 35.892 525.622 37.896ZM531.164 67.11C535.422 65.231 538.71 62.523 541.028 58.984C543.344 55.447 544.504 51.234 544.504 46.349C544.504 41.402 543.344 37.144 541.028 33.574C538.71 30.003 535.422 27.265 531.164 25.354C526.904 23.444 521.831 22.49 515.946 22.49L487.482 22.49L487.482 88.246L502.701 88.246L502.701 69.928L515.946 69.928C516.187 69.928 516.406 69.902 516.644 69.899L529.285 88.246L545.725 88.246L531.03 67.159C531.073 67.141 531.121 67.129 531.164 67.11" fill="#FFFFFF" fill-rule="nonzero"/><path d="M605.12 22.489L588.954 49.295L572.856 22.489L555.87 22.489L581.327 64.806L581.327 88.245L596.546 88.245L596.546 64.964L622.097 22.489L605.12 22.489" fill="#FFFFFF" fill-rule="nonzero"/><path d="M200.023 69.454L180.024 22.49L164.244 22.49L192.612 88.246L207.643 88.246L236.106 22.49L220.325 22.49L200.023 69.454" fill="#FFFFFF" fill-rule="nonzero"/><path d="M269.453 22.489L241.084 88.245L256.865 88.245L276.864 41.281L297.166 88.245L312.947 88.245L284.483 22.489L269.453 22.489" fill="#FFFFFF" fill-rule="nonzero"/><path d="M426.8 22.489L398.431 88.245L414.212 88.245L434.211 41.281L454.512 88.245L470.294 88.245L441.83 22.489L426.8 22.489" fill="#FFFFFF" fill-rule="nonzero"/><path d="M697.998 88.245L669.535 22.489L654.504 22.489L626.135 88.245L641.917 88.245L661.915 41.281L682.217 88.245L697.998 88.245" fill="#FFFFFF" fill-rule="nonzero"/></svg></div>
+  </div>
+</footer>
+
+</body>
+</html>
